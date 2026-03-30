@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sevilla Cofrade 2026 — La guía oficial de la Semana Santa</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '255990205083550');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=255990205083550&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+  :root {
+    --rojo:    #9B1B30;
+    --rojo-d:  #6b1020;
+    --rojo-dd: #3d0810;
+    --dorado:  #C5973A;
+    --dorado-l:#E2B55A;
+    --crema:   #F7F0E3;
+    --crema-d: #EDE3CE;
+    --marron:  #4A3728;
+    --verde:   #2D5A3D;
+    --texto:   #2C1E14;
+    --blanco:  #fff;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--crema);
+    color: var(--texto);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--rojo-dd);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 60px 20px 80px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 100%, rgba(197,151,58,.25) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 0% 30%, rgba(155,27,48,.4) 0%, transparent 55%),
+      repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,.012) 2px, rgba(255,255,255,.012) 3px);
+    pointer-events: none;
+  }
+
+  /* Foto de fondo procesión */
+  .hero-foto {
+    position: absolute;
+    inset: 0;
+    background-image: url('img/IMG_5636.jpeg');
+    background-size: cover;
+    background-position: center 30%;
+    opacity: .18;
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+    text-align: center;
+  }
+
+  /* Badge oferta */
+  .badge-oferta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--dorado), var(--dorado-l));
+    color: var(--rojo-dd);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 7px 18px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 16px rgba(197,151,58,.4);
+    animation: pulso 2s ease-in-out infinite;
+  }
+  @keyframes pulso {
+    0%,100% { box-shadow: 0 4px 16px rgba(197,151,58,.4); }
+    50% { box-shadow: 0 4px 28px rgba(197,151,58,.7); }
+  }
+
+  .hero-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 10vw, 64px);
+    font-weight: 900;
+    color: #fff;
+    line-height: .92;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+
+  .hero-subtitulo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(20px, 5vw, 30px);
+    color: var(--dorado-l);
+    margin-bottom: 16px;
+  }
+
+  .hero-linea {
+    width: 50px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+    margin: 0 auto 20px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,.72);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Precio */
+  .precio-wrap {
+    margin-bottom: 28px;
+  }
+  .precio-original {
+    font-size: 15px;
+    color: rgba(255,255,255,.45);
+    text-decoration: line-through;
+    margin-bottom: 2px;
+  }
+  .precio-oferta {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+  }
+  .precio-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 68px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+  }
+  .precio-num sup {
+    font-size: 28px;
+    vertical-align: top;
+    margin-top: 12px;
+  }
+  .precio-dto {
+    background: var(--rojo);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+  }
+  .precio-nota {
+    font-size: 12px;
+    color: rgba(255,255,255,.4);
+    margin-top: 6px;
+    letter-spacing: 1px;
+  }
+
+  /* CTA botón */
+  .btn-cta {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto 14px;
+    padding: 18px 24px;
+    background: linear-gradient(135deg, var(--dorado), var(--dorado-l));
+    color: var(--rojo-dd);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(197,151,58,.45);
+    transition: transform .15s, box-shadow .15s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px rgba(197,151,58,.6);
+  }
+  .btn-cta:active { transform: translateY(0); }
+
+  .hero-garantia {
+    font-size: 11px;
+    color: rgba(255,255,255,.35);
+    letter-spacing: 1px;
+  }
+
+  /* Flecha scroll */
+  .scroll-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: rgba(255,255,255,.3);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: bajar 1.5s ease-in-out infinite;
+  }
+  @keyframes bajar {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ── SECCIÓN MOCKUPS ── */
+  .sec-mockups {
+    background: var(--rojo-d);
+    padding: 70px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sec-mockups::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,.015) 2px, rgba(255,255,255,.015) 3px);
+    pointer-events: none;
+  }
+
+  .sec-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--dorado-l);
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: .85;
+  }
+  .sec-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 7vw, 40px);
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.15;
+  }
+
+  .mockups-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .mockup-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 260px;
+    position: relative;
+  }
+  .mockup-item.centro {
+    transform: scale(1.08);
+    z-index: 2;
+  }
+
+  .mockup-frame {
+    background: #1a1a1a;
+    border-radius: 32px;
+    padding: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.1);
+    overflow: hidden;
+  }
+  .mockup-screen {
+    border-radius: 24px;
+    overflow: hidden;
+    aspect-ratio: 9/19;
+    background: var(--crema);
+  }
+  .mockup-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+  .mockup-label {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,.55);
+    letter-spacing: 1px;
+  }
+
+  /* ── SECCIÓN CARACTERÍSTICAS ── */
+  .sec-features {
+    background: var(--crema);
+    padding: 70px 20px;
+  }
+
+  .features-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 6vw, 36px);
+    font-weight: 700;
+    color: var(--rojo-d);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .feature-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid rgba(197,151,58,.2);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    box-shadow: 0 1px 6px rgba(74,55,40,.08);
+    transition: transform .2s, border-color .2s;
+  }
+  .feature-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(197,151,58,.45);
+  }
+  .feature-ico {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .feature-txt strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--rojo-d);
+    margin-bottom: 3px;
+  }
+  .feature-txt span {
+    font-size: 13px;
+    color: #7a6252;
+    line-height: 1.4;
+  }
+
+  /* ── SECCIÓN FOTO GRANDE ── */
+  .sec-foto {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+  .sec-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+  .sec-foto-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(61,8,16,.3) 0%, rgba(61,8,16,.8) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .sec-foto-txt {
+    text-align: center;
+    color: #fff;
+    max-width: 480px;
+  }
+  .sec-foto-txt h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 6vw, 34px);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .sec-foto-txt p {
+    font-size: 14px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.6;
+  }
+
+  /* ── SECCIÓN URGENCIA ── */
+  .sec-urgencia {
+    background: var(--marron);
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .sec-urgencia::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,.02) 2px, rgba(255,255,255,.02) 3px);
+  }
+  .urgencia-inner { position: relative; z-index: 1; }
+  .urgencia-icon { font-size: 40px; margin-bottom: 14px; }
+  .urgencia-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 6vw, 32px);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .urgencia-desc {
+    font-size: 15px;
+    color: rgba(255,255,255,.65);
+    max-width: 380px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+  }
+  .urgencia-dias {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .dia-bloque {
+    text-align: center;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(197,151,58,.3);
+    border-radius: 8px;
+    padding: 14px 20px;
+    min-width: 80px;
+  }
+  .dia-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--dorado-l);
+    line-height: 1;
+  }
+  .dia-lbl {
+    font-size: 9px;
+    color: rgba(255,255,255,.45);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  /* ── CTA FINAL ── */
+  .sec-cta-final {
+    background: var(--rojo-dd);
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .sec-cta-final::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(197,151,58,.2) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .cta-final-inner { position: relative; z-index: 1; max-width: 480px; margin: 0 auto; }
+  .cta-final-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 8vw, 46px);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+  .cta-final-sub {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(16px, 4vw, 22px);
+    color: var(--dorado-l);
+    margin-bottom: 30px;
+  }
+  .cta-precio-final {
+    margin-bottom: 28px;
+  }
+  .cta-precio-final .tachado {
+    font-size: 16px;
+    color: rgba(255,255,255,.35);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+  .cta-precio-final .precio-grande {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+  }
+  .cta-precio-final .precio-grande sup {
+    font-size: 24px;
+    vertical-align: top;
+    margin-top: 10px;
+  }
+  .cta-nota-final {
+    font-size: 11px;
+    color: rgba(255,255,255,.3);
+    margin-top: 16px;
+    letter-spacing: .8px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #1a0a08;
+    color: rgba(255,255,255,.3);
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 11px;
+    letter-spacing: .8px;
+    line-height: 1.8;
+  }
+
+  /* ── STICKY CTA MÓVIL ── */
+  .sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--dorado), var(--dorado-l));
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.3);
+    z-index: 999;
+    transform: translateY(100%);
+    transition: transform .3s ease;
+  }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-cta-txt { color: var(--rojo-dd); }
+  .sticky-cta-txt strong { display: block; font-size: 13px; font-weight: 700; }
+  .sticky-cta-txt span { font-size: 11px; opacity: .7; }
+  .sticky-btn {
+    background: var(--rojo-d);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  @media(max-width:480px) {
+    .mockup-item { max-width: 160px; }
+    .mockup-item.centro { transform: scale(1.05); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-foto"></div>
+
+  <div class="hero-inner">
+    <div class="badge-oferta">
+      🔥 Oferta especial 2026 · 50% de descuento
+    </div>
+
+    <h1 class="hero-titulo">Sevilla<br>Cofrade</h1>
+    <div class="hero-subtitulo">2026</div>
+    <div class="hero-linea"></div>
+
+    <p class="hero-desc">
+      La guía oficial de la Semana Santa de Sevilla en tu móvil.<br>
+      Más de 60 hermandades · Horarios · Itinerarios · Carrera Oficial
+    </p>
+
+    <div class="precio-wrap">
+      <div class="precio-original">Precio normal: 1,99 €</div>
+      <div class="precio-oferta">
+        <div class="precio-num"><sup>€</sup>0<span style="font-size:36px">,99</span></div>
+        <div class="precio-dto">-50%</div>
+      </div>
+      <div class="precio-nota">Pago único · Acceso completo · Solo Semana Santa 2026</div>
+    </div>
+
+    <a href="https://buy.stripe.com/7sYdR97cD5zf7049KSebu03" class="btn-cta">
+      🎉 Acceder ahora por 0,99 € →
+    </a>
+    <div class="hero-garantia">🔒 Pago seguro · Stripe · Acceso inmediato</div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Ver más</span>
+    <span style="font-size:18px">↓</span>
+  </div>
+</section>
+
+<!-- ══════════ MOCKUPS ══════════ -->
+<section class="sec-mockups">
+  <div class="sec-label">La app en tu móvil</div>
+  <h2 class="sec-titulo">Todo lo que necesitas<br>en la palma de tu mano</h2>
+
+  <div class="mockups-grid">
+    <div class="mockup-item">
+      <div class="mockup-frame">
+        <div class="mockup-screen">
+          <img src="img/IMG_5635.jpeg" alt="App Sevilla Cofrade - Pantalla principal">
+        </div>
+      </div>
+      <div class="mockup-label">Todos los días y hermandades</div>
+    </div>
+
+    <div class="mockup-item centro">
+      <div class="mockup-frame">
+        <div class="mockup-screen">
+          <img src="img/IMG_5636.jpeg" alt="App Sevilla Cofrade - Horarios y Carrera Oficial">
+        </div>
+      </div>
+      <div class="mockup-label">Horarios · Carrera Oficial · Itinerario</div>
+    </div>
+
+    <div class="mockup-item">
+      <div class="mockup-frame">
+        <div class="mockup-screen">
+          <img src="img/IMG_5637.jpeg" alt="App Sevilla Cofrade - Detalle hermandad">
+        </div>
+      </div>
+      <div class="mockup-label">Historia · Túnica · Mapa</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CARACTERÍSTICAS ══════════ -->
+<section class="sec-features">
+  <h2 class="features-titulo">¿Qué incluye la guía?</h2>
+
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-ico">🏛️</div>
+      <div class="feature-txt">
+        <strong>Más de 60 hermandades</strong>
+        <span>Todos los días de la Semana Santa de Sevilla 2026</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-ico">⏱️</div>
+      <div class="feature-txt">
+        <strong>Horarios oficiales exactos</strong>
+        <span>7 puntos del recorrido — Salida, Campana, Sierpes, Plaza, Catedral y más</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-ico">🗺️</div>
+      <div class="feature-txt">
+        <strong>Itinerarios calle por calle</strong>
+        <span>El recorrido completo de cada cofradía con mapa interactivo</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-ico">🎗️</div>
+      <div class="feature-txt">
+        <strong>Carrera Oficial destacada</strong>
+        <span>Horarios exactos de paso por Campana → Sierpes → Plaza → Catedral</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-ico">🎨</div>
+      <div class="feature-txt">
+        <strong>Túnicas y colores</strong>
+        <span>Swatches de color de cada hermandad — identifica a los nazarenos al instante</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-ico">📖</div>
+      <div class="feature-txt">
+        <strong>Historia e imágenes titulares</strong>
+        <span>Fundación, historia y datos de cada hermandad y sus imágenes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOTO GRANDE ══════════ -->
+<section class="sec-foto">
+  <img src="img/IMG_5632.png" alt="Semana Santa Sevilla 2026 con la app">
+  <div class="sec-foto-overlay">
+    <div class="sec-foto-txt">
+      <h2>Vive la Semana Santa<br>como nunca antes</h2>
+      <p>Sabe exactamente dónde estará cada hermandad en cada momento. Sin perderte nada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ URGENCIA ══════════ -->
+<section class="sec-urgencia">
+  <div class="urgencia-inner">
+    <div class="urgencia-icon">⏳</div>
+    <h2 class="urgencia-titulo">Oferta válida solo<br>durante la Semana Santa</h2>
+    <p class="urgencia-desc">Esta oferta del 50% es exclusiva para la Semana Santa de Sevilla 2026. Cuando termine, el precio vuelve a 1,99 €.</p>
+
+    <div class="urgencia-dias">
+      <div class="dia-bloque">
+        <div class="dia-num" id="d-dias">--</div>
+        <div class="dia-lbl">Días</div>
+      </div>
+      <div class="dia-bloque">
+        <div class="dia-num" id="d-horas">--</div>
+        <div class="dia-lbl">Horas</div>
+      </div>
+      <div class="dia-bloque">
+        <div class="dia-num" id="d-min">--</div>
+        <div class="dia-lbl">Minutos</div>
+      </div>
+      <div class="dia-bloque">
+        <div class="dia-num" id="d-seg">--</div>
+        <div class="dia-lbl">Segundos</div>
+      </div>
+    </div>
+
+    <a href="https://buy.stripe.com/7sYdR97cD5zf7049KSebu03" class="btn-cta" style="max-width:360px">
+      🎉 Aprovechar la oferta — 0,99 €
+    </a>
+  </div>
+</section>
+
+<!-- ══════════ FOTO 2 ══════════ -->
+<section class="sec-foto" style="height:320px">
+  <img src="img/IMG_5628.png" alt="Sevilla Semana Santa procesión con app">
+  <div class="sec-foto-overlay">
+    <div class="sec-foto-txt">
+      <h2>La procesión en tu pantalla.<br>La emoción en tu corazón.</h2>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA FINAL ══════════ -->
+<section class="sec-cta-final">
+  <div class="cta-final-inner">
+    <h2 class="cta-final-titulo">¿A qué esperas?</h2>
+    <div class="cta-final-sub">La Semana Santa ya ha empezado</div>
+
+    <div class="cta-precio-final">
+      <div class="tachado">Precio normal: 1,99 €</div>
+      <div class="precio-grande"><sup>€</sup>0<span style="font-size:30px">,99</span></div>
+    </div>
+
+    <a href="https://buy.stripe.com/7sYdR97cD5zf7049KSebu03" class="btn-cta">
+      🎉 Acceder ahora por 0,99 € →
+    </a>
+
+    <div class="cta-nota-final">
+      🔒 Pago seguro con Stripe · Acceso inmediato · Sin suscripción<br>
+      Datos oficiales del Consejo de Hermandades y Cofradías de Sevilla
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  SEVILLA COFRADE 2026 · Guía oficial de la Semana Santa de Sevilla<br>
+  Datos oficiales del Consejo General de Hermandades y Cofradías de la Ciudad de Sevilla<br>
+  © 2026 · Todos los derechos reservados
+</footer>
+
+<!-- ══════════ STICKY CTA ══════════ -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-txt">
+    <strong>Sevilla Cofrade 2026</strong>
+    <span>Oferta 50% · Solo 0,99 €</span>
+  </div>
+  <a href="https://buy.stripe.com/7sYdR97cD5zf7049KSebu03" class="sticky-btn">
+    Acceder →
+  </a>
+</div>
+
+<script>
+  // Contador regresivo hasta el Domingo de Resurrección 5 abril 2026
+  const fin = new Date('2026-04-05T23:59:59');
+  function actualizarContador() {
+    const ahora = new Date();
+    const diff = fin - ahora;
+    if (diff <= 0) {
+      document.getElementById('d-dias').textContent = '0';
+      document.getElementById('d-horas').textContent = '0';
+      document.getElementById('d-min').textContent = '0';
+      document.getElementById('d-seg').textContent = '0';
+      return;
+    }
+    const dias = Math.floor(diff / 86400000);
+    const horas = Math.floor((diff % 86400000) / 3600000);
+    const min = Math.floor((diff % 3600000) / 60000);
+    const seg = Math.floor((diff % 60000) / 1000);
+    document.getElementById('d-dias').textContent = String(dias).padStart(2,'0');
+    document.getElementById('d-horas').textContent = String(horas).padStart(2,'0');
+    document.getElementById('d-min').textContent = String(min).padStart(2,'0');
+    document.getElementById('d-seg').textContent = String(seg).padStart(2,'0');
+  }
+  actualizarContador();
+  setInterval(actualizarContador, 1000);
+
+  // Sticky CTA aparece al hacer scroll
+  const sticky = document.getElementById('stickyCta');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) sticky.classList.add('visible');
+    else sticky.classList.remove('visible');
+  });
+</script>
+
+</body>
+</html>
+<script>
+  // ── TRACKING META PIXEL — EVENTOS ──
+
+  // InitiateCheckout en todos los botones de compra
+  document.querySelectorAll('a[href*="stripe.com"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if(typeof fbq !== 'undefined') {
+        fbq('track', 'InitiateCheckout', {
+          value: 0.99,
+          currency: 'EUR',
+          content_name: 'Sevilla Cofrade 2026',
+          content_type: 'product'
+        });
+      }
+    });
+  });
+
+  // ViewContent cuando la página carga
+  window.addEventListener('load', function() {
+    if(typeof fbq !== 'undefined') {
+      fbq('track', 'ViewContent', {
+        content_name: 'Landing Sevilla Cofrade 2026',
+        content_type: 'product',
+        value: 0.99,
+        currency: 'EUR'
+      });
+    }
+  });
+
+  // Lead cuando el usuario hace scroll al 50%
+  var leadTracked = false;
+  window.addEventListener('scroll', function() {
+    if (!leadTracked) {
+      var pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      if (pct >= 50) {
+        if(typeof fbq !== 'undefined') {
+          fbq('track', 'Lead', { content_name: 'Landing Sevilla Cofrade 2026' });
+        }
+        leadTracked = true;
+      }
+    }
+  });
+</script>
